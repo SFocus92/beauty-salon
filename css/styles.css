@@ -6,23 +6,26 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
     padding-top: 80px; /* Учитываем фиксированную шапку */
 }
 
-/* Контейнер */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* Шрифты */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Главный баннер */
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    background-attachment: fixed;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,33 +33,109 @@ body {
 
 /* Карточки услуг */
 .service-card {
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
 }
+
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: #f472b6;
 }
 
 /* Карточки товаров */
 .product-card {
+    position: relative;
     transition: transform 0.3s ease;
 }
+
 .product-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* Фоновые секции */
+.bg-about-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-contact-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Разделитель секций */
+.section-divider {
+    height: 4px;
+    background: linear-gradient(to right, #f472b6, #a78bfa);
+    border-radius: 2px;
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* Анимации */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
 
 /* Мобильное меню */
 #mobile-menu {
     display: none;
 }
+
 #mobile-menu.active {
     display: block;
 }
 
 /* Адаптивность */
+@media (max-width: 1024px) {
+    .hero-image {
+        min-height: 60vh;
+    }
+    .hero-image h2 {
+        font-size: 2.5rem;
+    }
+    .hero-image p {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-image {
-        height: 40vh;
+        min-height: 50vh;
+        background-attachment: scroll;
     }
     .hero-image h2 {
         font-size: 2rem;
@@ -64,11 +143,18 @@ body {
     .hero-image p {
         font-size: 1.25rem;
     }
-}
-
-@media (max-width: 640px) {
     .service-card img,
     .product-card img {
         height: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-card,
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    .hero-image {
+        min-height: 40vh;
     }
 }
