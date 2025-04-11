@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    padding-top: 100px; /* Учитываем фиксированную шапку */
+    padding-top: 140px; /* Учитываем большую шапку */
     overflow-x: hidden;
     background-image: url('../images/hero.jpg');
     background-size: cover;
@@ -27,6 +27,12 @@ body {
 
 .font-poppins {
     font-family: 'Poppins', sans-serif;
+}
+
+/* Золотой цвет */
+.text-gold {
+    color: #FFD700; /* Золотой цвет */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Тень для объёма */
 }
 
 /* Градиентный текст */
@@ -172,6 +178,9 @@ body {
     .hero-image p {
         font-size: 2rem;
     }
+    header h1 {
+        font-size: 5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -189,6 +198,9 @@ body {
     .product-card img {
         height: 220px;
     }
+    header h1 {
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -204,5 +216,8 @@ body {
     .service-card,
     .product-card {
         margin-bottom: 2rem;
+    }
+    header h1 {
+        font-size: 3rem;
     }
 }
