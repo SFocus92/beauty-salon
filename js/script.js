@@ -14,8 +14,23 @@ const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
 addToCartButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        e.preventDefault();
         cartCount++;
         cartCountElement.textContent = cartCount;
     });
+});
+
+// Анимация при прокрутке
+const animateElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+        }
+    });
+}, { threshold: 0.2 });
+
+animateElements.forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
 });
