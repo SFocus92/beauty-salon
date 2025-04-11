@@ -1,0 +1,74 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 80px; /* Учитываем фиксированную шапку */
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Главный баннер */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Карточки услуг */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Карточки товаров */
+.product-card {
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+/* Мобильное меню */
+#mobile-menu {
+    display: none;
+}
+#mobile-menu.active {
+    display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 40vh;
+    }
+    .hero-image h2 {
+        font-size: 2rem;
+    }
+    .hero-image p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-card img,
+    .product-card img {
+        height: 200px;
+    }
+}
