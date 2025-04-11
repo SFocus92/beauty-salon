@@ -5,218 +5,389 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Салон красоты "Зеркало" | Севастополь</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-sans bg-gray-50">
+<body class="bg-gradient-to-b from-pink-50 to-white">
     <!-- Шапка -->
-    <header class="bg-white shadow-md fixed w-full top-0 z-10">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <header class="bg-white shadow-lg fixed w-full top-0 z-20">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <i class="fas fa-spa text-3xl text-pink-600 mr-2"></i>
-                <h1 class="text-2xl font-bold text-gray-800">Зеркало</h1>
+                <i class="fas fa-spa text-4xl text-pink-500 animate-pulse mr-3"></i>
+                <h1 class="text-3xl font-bold text-gray-800 font-playfair">Зеркало</h1>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-700 hover:text-pink-600 transition">Услуги</a>
-                <a href="#products" class="text-gray-700 hover:text-pink-600 transition">Товары</a>
-                <a href="#about" class="text-gray-700 hover:text-pink-600 transition">О нас</a>
-                <a href="#contacts" class="text-gray-700 hover:text-pink-600 transition">Контакты</a>
+            <nav class="hidden md:flex space-x-10">
+                <a href="#services" class="text-gray-700 hover:text-pink-500 font-semibold transition">Услуги</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-500 font-semibold transition">Товары</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-500 font-semibold transition">О нас</a>
+                <a href="#contacts" class="text-gray-700 hover:text-pink-500 font-semibold transition">Контакты</a>
             </nav>
-            <div class="flex items-center space-x-4">
-                <button id="cart-button" class="relative text-gray-700 hover:text-pink-600">
-                    <i class="fas fa-shopping-cart text-xl"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            <div class="flex items-center space-x-6">
+                <button id="cart-button" class="relative text-gray-700 hover:text-pink-500">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cart-count" class="absolute -top-3 -right-3 bg-pink-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">0</span>
                 </button>
                 <button id="menu-button" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
         <!-- Мобильное меню -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <div class="flex flex-col px-4 py-2 space-y-3">
-                <a href="#services" class="text-gray-700 hover:text-pink-600 transition">Услуги</a>
-                <a href="#products" class="text-gray-700 hover:text-pink-600 transition">Товары</a>
-                <a href="#about" class="text-gray-700 hover:text-pink-600 transition">О нас</a>
-                <a href="#contacts" class="text-gray-700 hover:text-pink-600 transition">Контакты</a>
+            <div class="flex flex-col px-4 py-3 space-y-4">
+                <a href="#services" class="text-gray-700 hover:text-pink-500 font-semibold transition">Услуги</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-500 font-semibold transition">Товары</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-500 font-semibold transition">О нас</a>
+                <a href="#contacts" class="text-gray-700 hover:text-pink-500 font-semibold transition">Контакты</a>
             </div>
         </div>
     </header>
 
     <!-- Главный баннер -->
-    <div class="hero-image pt-20">
+    <section class="hero-image pt-24 pb-16">
         <div class="container mx-auto px-4 text-center text-white">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4">Салон красоты "Зеркало"</h2>
-            <p class="text-lg md:text-2xl mb-6">Ваша красота - наша профессия</p>
-            <a href="#services" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition">Наши услуги</a>
+            <h2 class="text-4xl md:text-6xl font-bold font-playfair mb-6 animate-fade-in">Салон красоты "Зеркало"</h2>
+            <p class="text-xl md:text-3xl mb-8 font-roboto animate-fade-in">Раскройте свою красоту с нами!</p>
+            <a href="#services" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-8 rounded-full transition transform hover:scale-105 animate-pulse">Наши услуги</a>
         </div>
-    </div>
+    </section>
 
     <!-- Основной контент -->
-    <main class="container mx-auto px-4 py-10">
+    <main class="container mx-auto px-4 py-12">
         <!-- Услуги -->
-        <section id="services" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Наши услуги</h2>
+        <section id="services" class="mb-20 relative">
+            <div class="section-divider mb-12"></div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 font-playfair animate-fade-in">Наши услуги</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Услуга: Парикмахерские услуги -->
-                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
-                    <img src="images/hairdressing.jpg" alt="Парикмахерские услуги" class="w-full h-48 object-cover">
+                <div class="service-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up">
+                    <img src="images/hairdressing.jpg" alt="Парикмахерские услуги" class="w-full h-56 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Парикмахерские услуги</h3>
-                        <ul class="space-y-2 mb-4 text-gray-600">
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Женские стрижки</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Мужские стрижки</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Окрашивание</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Укладки</li>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800 font-playfair">Парикмахерские услуги</h3>
+                        <ul class="space-y-3 mb-6 text-gray-600 font-roboto">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Женские стрижки</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Мужские стрижки</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Окрашивание</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Укладки</li>
                         </ul>
                         <div class="flex justify-between items-center">
-                            <span class="text-pink-600 font-bold">от 800 ₽</span>
-                            <a href="tel:+79780917717" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition">Записаться</a>
+                            <span class="text-pink-500 font-bold text-lg">от 800 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Записаться</a>
                         </div>
                     </div>
                 </div>
-                <!-- Остальные услуги аналогично, меняется только изображение, название, описание и цена -->
                 <!-- Услуга: Маникюр и педикюр -->
-                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
-                    <img src="images/manicure.jpg" alt="Маникюр и педикюр" class="w-full h-48 object-cover">
+                <div class="service-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-100">
+                    <img src="images/manicure.jpg" alt="Маникюр и педикюр" class="w-full h-56 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Маникюр и педикюр</h3>
-                        <ul class="space-y-2 mb-4 text-gray-600">
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Классический маникюр</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Аппаратный маникюр</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Покрытие гель-лаком</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Педикюр</li>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800 font-playfair">Маникюр и педикюр</h3>
+                        <ul class="space-y-3 mb-6 text-gray-600 font-roboto">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Классический маникюр</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Аппаратный маникюр</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Покрытие гель-лаком</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Педикюр</li>
                         </ul>
                         <div class="flex justify-between items-center">
-                            <span class="text-pink-600 font-bold">от 1000 ₽</span>
-                            <a href="tel:+79780917717" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition">Записаться</a>
+                            <span class="text-pink-500 font-bold text-lg">от 1000 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Записаться</a>
                         </div>
                     </div>
                 </div>
                 <!-- Услуга: Косметология -->
-                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
-                    <img src="images/cosmetology.jpg" alt="Косметология" class="w-full h-48 object-cover">
+                <div class="service-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-200">
+                    <img src="images/cosmetology.jpg" alt="Косметология" class="w-full h-56 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Косметология</h3>
-                        <ul class="space-y-2 mb-4 text-gray-600">
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Чистка лица</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Уходовые процедуры</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Массаж лица</li>
-                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i>Инъекционная косметология</li>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800 font-playfair">Косметология</h3>
+                        <ul class="space-y-3 mb-6 text-gray-600 font-roboto">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Чистка лица</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Уходовые процедуры</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Массаж лица</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Инъекционная косметология</li>
                         </ul>
                         <div class="flex justify-between items-center">
-                            <span class="text-pink-600 font-bold">от 1500 ₽</span>
-                            <a href="tel:+79780917717" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition">Записаться</a>
+                            <span class="text-pink-500 font-bold text-lg">от 1500 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Записаться</a>
                         </div>
                     </div>
                 </div>
-                <!-- Добавьте остальные услуги (Макияж, Массаж, Депиляция) по аналогии -->
+                <!-- Услуга: Макияж -->
+                <div class="service-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up">
+                    <img src="images/makeup.jpg" alt="Макияж" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800 font-playfair">Макияж</h3>
+                        <ul class="space-y-3 mb-6 text-gray-600 font-roboto">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Дневной макияж</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Вечерний макияж</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Свадебный макияж</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Обучение макияжу</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold text-lg">от 1200 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Услуга: Массаж -->
+                <div class="service-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-100">
+                    <img src="images/massage.jpg" alt="Массаж" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800 font-playfair">Массаж</h3>
+                        <ul class="space-y-3 mb-6 text-gray-600 font-roboto">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Классический массаж</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Антицеллюлитный массаж</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Лимфодренажный массаж</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>СПА-программы</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold text-lg">от 1500 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Услуга: Депиляция -->
+                <div class="service-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-200">
+                    <img src="images/depilation.jpg" alt="Депиляция" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800 font-playfair">Депиляция</h3>
+                        <ul class="space-y-3 mb-6 text-gray-600 font-roboto">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Восковая депиляция</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Шугаринг</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Лазерная эпиляция</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-3"></i>Депиляция глубокого бикини</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold text-lg">от 800 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Записаться</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Товары -->
-        <section id="products" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Наши товары</h2>
+        <section id="products" class="mb-20 relative">
+            <div class="section-divider mb-12"></div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 font-playfair animate-fade-in">Наши товары</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Товар: Шампунь -->
-                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                <div class="product-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up">
                     <img src="images/shampoo.jpg" alt="Шампунь" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold mb-2 text-gray-800">Шампунь для волос</h3>
-                        <p class="text-gray-600 mb-3">Профессиональный шампунь для всех типов волос</p>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 font-playfair">Шампунь для волос</h3>
+                        <p class="text-gray-600 mb-4 font-roboto">Профессиональный шампунь для всех типов волос</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-pink-600 font-bold">1200 ₽</span>
-                            <a href="tel:+79780917717" class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded transition">Купить</a>
+                            <span class="text-pink-500 font-bold text-lg">1200 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Купить</a>
                         </div>
                     </div>
                 </div>
-                <!-- Остальные товары аналогично -->
+                <!-- Товар: Гель-лак -->
+                <div class="product-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-100">
+                    <img src="images/gel-polish.jpg" alt="Гель-лак" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 font-playfair">Гель-лак</h3>
+                        <p class="text-gray-600 mb-4 font-roboto">Стойкое покрытие для ногтей, 10 мл</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold text-lg">850 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Товар: Крем для лица -->
+                <div class="product-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-200">
+                    <img src="images/face-cream.jpg" alt="Крем для лица" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 font-playfair">Крем для лица</h3>
+                        <p class="text-gray-600 mb-4 font-roboto">Увлажняющий крем с гиалуроновой кислотой</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold text-lg">1500 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Товар: Масло для тела -->
+                <div class="product-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 animate-slide-up delay-300">
+                    <img src="images/body-oil.jpg" alt="Масло для тела" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 font-playfair">Масло для тела</h3>
+                        <p class="text-gray-600 mb-4 font-roboto">Питательное масло с ароматом ванили</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold text-lg">950 ₽</span>
+                            <a href="tel:+79780917717" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition transform hover:scale-105">Купить</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- О нас -->
-        <section id="about" class="mb-16">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="md:flex">
+        <section id="about" class="mb-20 relative bg-about-section py-16">
+            <div class="section-divider mb-12"></div>
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
                     <div class="md:w-1/2">
                         <img src="images/hero.jpg" alt="Салон красоты Зеркало" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8 md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-800">О нашем салоне</h2>
-                        <p class="text-gray-600 mb-4">Салон красоты "Зеркало" - это место, где каждая женщина может почувствовать себя королевой, а каждый мужчина - настоящим джентльменом.</p>
-                        <p class="text-gray-600 mb-4">Наша команда профессионалов с многолетним опытом работы готова предложить вам полный спектр услуг в области красоты и ухода за собой.</p>
-                        <p class="text-gray-600 mb-6">Мы используем только профессиональную косметику и оборудование от ведущих мировых производителей.</p>
+                        <h2 class="text-4xl font-bold mb-6 text-gray-800 font-playfair animate-fade-in">О нашем салоне</h2>
+                        <p class="text-gray-600 mb-4 font-roboto">Салон красоты "Зеркало" – это место, где раскрывается ваша уникальная красота.</p>
+                        <p class="text-gray-600 mb-4 font-roboto">Наши мастера с любовью и профессионализмом создают образы, подчеркивающие вашу индивидуальность.</p>
+                        <p class="text-gray-600 mb-6 font-roboto">Мы используем только премиальную косметику и современное оборудование.</p>
                         <div class="flex flex-wrap gap-4">
-                            <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
-                                <i class="fas fa-check-circle text-pink-600 mr-2"></i>
-                                <span class="text-gray-700">Профессионализм</span>
+                            <div class="flex items-center bg-pink-100 px-4 py-2 rounded-full">
+                                <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                                <span class="text-gray-700 font-roboto">Профессионализм</span>
                             </div>
-                            <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
-                                <i class="fas fa-check-circle text-pink-600 mr-2"></i>
-                                <span class="text-gray-700">Гигиена</span>
+                            <div class="flex items-center bg-pink-100 px-4 py-2 rounded-full">
+                                <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                                <span class="text-gray-700 font-roboto">Гигиена</span>
                             </div>
-                            <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
-                                <i class="fas fa-check-circle text-pink-600 mr-2"></i>
-                                <span class="text-gray-700">Индивидуальный подход</span>
+                            <div class="flex items-center bg-pink-100 px-4 py-2 rounded-full">
+                                <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                                <span class="text-gray-700 font-roboto">Индивидуальность</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews" class="mb-20 relative">
+            <div class="section-divider mb-12"></div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 font-playfair animate-fade-in">Отзывы наших клиентов</h2>
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-xl animate-slide-up">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-pink-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 font-playfair">Анна</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 font-roboto">"Окрашивание превзошло ожидания! Цвет идеальный, волосы сияют!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-xl animate-slide-up delay-100">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-pink-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 font-playfair">Елена</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 font-roboto">"Маникюр держится уже месяц! Мастера – настоящие волшебники!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-xl animate-slide-up delay-200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-pink-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 font-playfair">Ольга</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 font-roboto">"Люблю косметологию здесь! Кожа после процедур как у младенца!"</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Контакты -->
-        <section id="contacts" class="mb-16">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="md:flex">
+        <section id="contacts" class="mb-20 relative bg-contact-section py-16">
+            <div class="section-divider mb-12"></div>
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
                     <div class="p-8 md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Контакты</h2>
-                        <div class="space-y-6">
+                        <h2 class="text-4xl font-bold mb-6 text-gray-800 font-playfair animate-fade-in">Свяжитесь с нами</h2>
+                        <div class="space-y-8">
                             <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-xl text-pink-600 mr-4 mt-1"></i>
+                                <i class="fas fa-map-marker-alt text-2xl text-pink-500 mr-4 mt-1"></i>
                                 <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">Адрес</h4>
-                                    <p class="text-gray-600">Севастополь, ул. Колобова, 34/1</p>
+                                    <h4 class="font-bold text-gray-800 font-playfair">Адрес</h4>
+                                    <p class="text-gray-600 font-roboto">Севастополь, ул. Колобова, 34/1</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-xl text-pink-600 mr-4 mt-1"></i>
+                                <i class="fas fa-phone-alt text-2xl text-pink-500 mr-4 mt-1"></i>
                                 <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">Телефон</h4>
-                                    <a href="tel:+79780917717" class="text-gray-600">+7 978 091 77 17</a>
+                                    <h4 class="font-bold text-gray-800 font-playfair">Телефон</h4>
+                                    <a href="tel:+79780917717" class="text-pink-500 hover:text-pink-600 font-roboto">+7 978 091 77 17</a>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-clock text-xl text-pink-600 mr-4 mt-1"></i>
+                                <i class="fas fa-clock text-2xl text-pink-500 mr-4 mt-1"></i>
                                 <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">Режим работы</h4>
-                                    <p class="text-gray-600">Пн-Пт: 9:00 - 20:00</p>
-                                    <p class="text-gray-600">Сб-Вс: 10:00 - 18:00</p>
+                                    <h4 class="font-bold text-gray-800 font-playfair">Режим работы</h4>
+                                    <p class="text-gray-600 font-roboto">Пн-Пт: 9:00 - 20:00</p>
+                                    <p class="text-gray-600 font-roboto">Сб-Вс: 10:00 - 18:00</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-envelope text-xl text-pink-600 mr-4 mt-1"></i>
+                                <i class="fas fa-envelope text-2xl text-pink-500 mr-4 mt-1"></i>
                                 <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
-                                    <p class="text-gray-600">salon.zerkalo@gmail.com</p>
+                                    <h4 class="font-bold text-gray-800 font-playfair">Email</h4>
+                                    <p class="text-gray-600 font-roboto">salon.zerkalo@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-hashtag text-2xl text-pink-500 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 font-playfair">Социальные сети</h4>
+                                    <div class="flex space-x-4 mt-2">
+                                        <a href="#" class="text-pink-500 hover:text-pink-600 text-2xl"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="text-pink-500 hover:text-pink-600 text-2xl"><i class="fab fa-vk"></i></a>
+                                        <a href="#" class="text-pink-500 hover:text-pink-600 text-2xl"><i class="fab fa-telegram"></i></a>
+                                        <a href="#" class="text-pink-500 hover:text-pink-600 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="md:w-1/2">
-                        <iframe src="https://yandex.ru/map-widget/v1/?ll=33.471947%2C44.616981&z=16&mode=poi&poi%5Bpoint%5D=33.471947%2C44.616981&poi%5Buri%5D=ymapsbm1%3A%2F%2Fgeo%3Ftext%3D%25D0%25A1%25D0%25B5%25D0%25B2%25D0%25B0%25D1%2581%25D1%2582%25D0%25BE%25D0%25B6%25D0%25B0%25D0%25B2%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B LGBTQIA+ (ЛГБТКИА+) сообщество также приветствуется.</p>
-                        </div>
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=33.471947%2C44.616981&z=16&mode=poi&poi%5Bpoint%5D=33.471947%2C44.616981&poi%5Buri%5D=ymapsbm1%3A%2F%2Fgeo%3Ftext%3D%25D0%25A1%25D0%25B5%25D0%25B2%25D0%25B0%25D1%2581%25D1%2582%25D0%25BE%25D0%25B6%25D0%25B0%25D0%25B2%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0%25B0%25D0% vicino a via Kolobova, 34/1, Sevastopol" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-gray-800 text-white py-6">
-            <div class="container mx-auto px-4 text-center">
-                <p>&copy; 2025 Салон красоты "Зеркало". Все права защищены.</p>
             </div>
-        </footer>
+        </section>
+    </main>
 
-        <script src="js/script.js"></script>
+    <!-- Футер -->
+    <footer class="bg-gradient-to-r from-pink-600 to-purple-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg font-roboto">© 2025 Салон красоты "Зеркало". С любовью к вашей красоте.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-vk"></i></a>
+                <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
