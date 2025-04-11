@@ -6,104 +6,173 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    padding-top: 80px; /* Учитываем фиксированную шапку */
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px; /* Учитываем фиксированную шапку */
+    overflow-x: hidden;
 }
 
 /* Шрифты */
-.font-playfair {
-    font-family: 'Playfair Display', serif;
+.font-parisienne {
+    font-family: 'Parisienne', cursive;
 }
 
-.font-roboto {
-    font-family: 'Roboto', sans-serif;
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Градиентный текст */
+.text-gradient {
+    background: linear-gradient(to right, #ec4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Главный баннер */
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+.hero-image > * {
+    z-index: 2;
 }
 
 /* Карточки услуг */
 .service-card {
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 3px solid transparent;
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    border-color: #f472b6;
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: #ec4899;
 }
 
 /* Карточки товаров */
 .product-card {
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
 }
 
 .product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Фоновые секции */
 .bg-about-section {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/hero.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.bg-about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.1), transparent);
 }
 
 .bg-contact-section {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/hero.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.bg-contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1), transparent);
 }
 
 /* Разделитель секций */
 .section-divider {
-    height: 4px;
-    background: linear-gradient(to right, #f472b6, #a78bfa);
-    border-radius: 2px;
+    height: 6px;
+    background: linear-gradient(to right, #ec4899, #8b5cf6);
+    border-radius: 3px;
     margin: 0 auto;
-    width: 100px;
+    width: 150px;
+    box-shadow: 0 2px 10px rgba(236, 72, 153, 0.5);
 }
 
 /* Анимации */
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes zoom-in {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes slide-up {
-    from { opacity: 0; transform: translateY(50px); }
+    from { opacity: 0; transform: translateY(80px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-    animation: fade-in 1s ease-out forwards;
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.animate-zoom-in {
+    animation: zoom-in 1s ease-out forwards;
 }
 
 .animate-slide-up {
-    animation: slide-up 0.8s ease-out forwards;
+    animation: slide-up 1s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fade-in 1.5s ease-out forwards;
 }
 
 .animate-pulse {
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+.animate-bounce {
+    animation: bounce 2s infinite;
 }
 
 .delay-100 { animation-delay: 0.1s; }
@@ -122,39 +191,45 @@ body {
 /* Адаптивность */
 @media (max-width: 1024px) {
     .hero-image {
-        min-height: 60vh;
+        min-height: 70vh;
     }
     .hero-image h2 {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
     .hero-image p {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .hero-image {
-        min-height: 50vh;
+        min-height: 60vh;
         background-attachment: scroll;
     }
     .hero-image h2 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .hero-image p {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     .service-card img,
     .product-card img {
-        height: 200px;
+        height: 220px;
     }
 }
 
 @media (max-width: 640px) {
+    .hero-image {
+        min-height: 50vh;
+    }
+    .hero-image h2 {
+        font-size: 2.5rem;
+    }
+    .hero-image p {
+        font-size: 1.25rem;
+    }
     .service-card,
     .product-card {
-        margin-bottom: 1rem;
-    }
-    .hero-image {
-        min-height: 40vh;
+        margin-bottom: 2rem;
     }
 }
