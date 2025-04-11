@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gradient-to-b from-pink-100 via-purple-50 to-white overflow-x-hidden">
+<body class="bg-hero">
     <!-- Шапка -->
     <header class="bg-white shadow-2xl fixed w-full top-0 z-30">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="flex items-center mx-auto md:mx-0">
                 <i class="fas fa-spa text-5xl text-pink-600 animate-bounce mr-4"></i>
                 <h1 class="text-4xl font-parisienne text-gradient">Зеркало</h1>
             </div>
@@ -34,7 +34,7 @@
         </div>
         <!-- Мобильное меню -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
-            <div class="flex flex-col px-6 py-4 space-y-5">
+            <div class="flex flex-col px-6 py-4 space-y-5 text-center">
                 <a href="#services" class="text-gray-800 hover:text-pink-600 font-poppins font-semibold text-lg transition">Услуги</a>
                 <a href="#products" class="text-gray-800 hover:text-pink-600 font-poppins font-semibold text-lg transition">Товары</a>
                 <a href="#about" class="text-gray-800 hover:text-pink-600 font-poppins font-semibold text-lg transition">О нас</a>
@@ -45,23 +45,23 @@
 
     <!-- Главный баннер -->
     <section class="hero-image pt-28 pb-20 relative">
-        <div class="container mx-auto px-6 text-center text-white">
+        <div class="container mx-auto px-6 text-center text-white max-w-5xl">
             <h2 class="text-5xl md:text-7xl font-parisienne mb-6 animate-zoom-in">Салон красоты "Зеркало"</h2>
             <p class="text-2xl md:text-4xl mb-10 font-poppins font-light animate-fade-in">Ваша красота – наше вдохновение!</p>
             <a href="#services" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold text-lg py-4 px-10 rounded-full transition transform hover:scale-110 animate-pulse">Наши услуги</a>
         </div>
-        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent opacity-30"></div>
     </section>
 
     <!-- Основной контент -->
-    <main class="container mx-auto px-6 py-16 relative">
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
         <!-- Услуги -->
-        <section id="services" class="mb-24">
-            <div class="section-divider mb-16"></div>
-            <h2 class="text-5xl font-parisienne text-center mb-16 text-gradient animate-zoom-in">Наши услуги</h2>
+        <section id="services" class="mb-24 text-center">
+            <div class="section-divider mb-16 mx-auto"></div>
+            <h2 class="text-5xl font-parisienne mb-16 text-gradient animate-zoom-in">Наши услуги</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Услуга: Парикмахерские услуги -->
-                <div class="service-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up">
+                <div class="service-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up">
                     <div class="relative">
                         <img src="images/hairdressing.jpg" alt="Парикмахерские услуги" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Новинка</div>
@@ -69,19 +69,19 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-parisienne mb-4 text-gray-800">Парикмахерские услуги</h3>
                         <ul class="space-y-4 mb-6 text-gray-600 font-poppins">
-                            <li class="flex items-center"><i class="fas fa-cut text-2xl text-pink-600 mr-4"></i>Женские стрижки</li>
-                            <li class="flex items-center"><i class="fas fa-cut text-2xl text-pink-600 mr-4"></i>Мужские стрижки</li>
-                            <li class="flex items-center"><i class="fas fa-paint-brush text-2xl text-pink-600 mr-4"></i>Окрашивание</li>
-                            <li class="flex items-center"><i class="fas fa-wind text-2xl text-pink-600 mr-4"></i>Укладки</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-cut text-2xl text-pink-600 mr-4"></i>Женские стрижки</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-cut text-2xl text-pink-600 mr-4"></i>Мужские стрижки</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-paint-brush text-2xl text-pink-600 mr-4"></i>Окрашивание</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-wind text-2xl text-pink-600 mr-4"></i>Укладки</li>
                         </ul>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-2xl">от 800 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Записаться</a>
                         </div>
                     </div>
                 </div>
                 <!-- Услуга: Маникюр и педикюр -->
-                <div class="service-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-100">
+                <div class="service-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-100">
                     <div class="relative">
                         <img src="images/manicure.jpg" alt="Маникюр и педикюр" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Хит</div>
@@ -89,19 +89,19 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-parisienne mb-4 text-gray-800">Маникюр и педикюр</h3>
                         <ul class="space-y-4 mb-6 text-gray-600 font-poppins">
-                            <li class="flex items-center"><i class="fas fa-hand-sparkles text-2xl text-pink-600 mr-4"></i>Классический маникюр</li>
-                            <li class="flex items-center"><i class="fas fa-hand-sparkles text-2xl text-pink-600 mr-4"></i>Аппаратный маникюр</li>
-                            <li class="flex items-center"><i class="fas fa-paint-roller text-2xl text-pink-600 mr-4"></i>Покрытие гель-лаком</li>
-                            <li class="flex items-center"><i class="fas fa-foot-print text-2xl text-pink-600 mr-4"></i>Педикюр</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-hand-sparkles text-2xl text-pink-600 mr-4"></i>Классический маникюр</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-hand-sparkles text-2xl text-pink-600 mr-4"></i>Аппаратный маникюр</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-paint-roller text-2xl text-pink-600 mr-4"></i>Покрытие гель-лаком</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-foot-print text-2xl text-pink-600 mr-4"></i>Педикюр</li>
                         </ul>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-2xl">от 1000 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Записаться</a>
                         </div>
                     </div>
                 </div>
                 <!-- Услуга: Косметология -->
-                <div class="service-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-200">
+                <div class="service-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-200">
                     <div class="relative">
                         <img src="images/cosmetology.jpg" alt="Косметология" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Премиум</div>
@@ -109,19 +109,19 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-parisienne mb-4 text-gray-800">Косметология</h3>
                         <ul class="space-y-4 mb-6 text-gray-600 font-poppins">
-                            <li class="flex items-center"><i class="fas fa-spa text-2xl text-pink-600 mr-4"></i>Чистка лица</li>
-                            <li class="flex items-center"><i class="fas fa-spa text-2xl text-pink-600 mr-4"></i>Уходовые процедуры</li>
-                            <li class="flex items-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Массаж лица</li>
-                            <li class="flex items-center"><i class="fas fa-syringe text-2xl text-pink-600 mr-4"></i>Инъекционная косметология</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-spa text-2xl text-pink-600 mr-4"></i>Чистка лица</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-spa text-2xl text-pink-600 mr-4"></i>Уходовые процедуры</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Массаж лица</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-syringe text-2xl text-pink-600 mr-4"></i>Инъекционная косметология</li>
                         </ul>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-2xl">от 1500 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Записаться</a>
                         </div>
                     </div>
                 </div>
                 <!-- Услуга: Макияж -->
-                <div class="service-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up">
+                <div class="service-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up">
                     <div class="relative">
                         <img src="images/makeup.jpg" alt="Макияж" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Тренд</div>
@@ -129,19 +129,19 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-parisienne mb-4 text-gray-800">Макияж</h3>
                         <ul class="space-y-4 mb-6 text-gray-600 font-poppins">
-                            <li class="flex items-center"><i class="fas fa-palette text-2xl text-pink-600 mr-4"></i>Дневной макияж</li>
-                            <li class="flex items-center"><i class="fas fa-palette text-2xl text-pink-600 mr-4"></i>Вечерний макияж</li>
-                            <li class="flex items-center"><i class="fas fa-heart text-2xl text-pink-600 mr-4"></i>Свадебный макияж</li>
-                            <li class="flex items-center"><i class="fas fa-graduation-cap text-2xl text-pink-600 mr-4"></i>Обучение макияжу</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-palette text-2xl text-pink-600 mr-4"></i>Дневной макияж</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-palette text-2xl text-pink-600 mr-4"></i>Вечерний макияж</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-heart text-2xl text-pink-600 mr-4"></i>Свадебный макияж</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-graduation-cap text-2xl text-pink-600 mr-4"></i>Обучение макияжу</li>
                         </ul>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-2xl">от 1200 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Записаться</a>
                         </div>
                     </div>
                 </div>
                 <!-- Услуга: Массаж -->
-                <div class="service-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-100">
+                <div class="service-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-100">
                     <div class="relative">
                         <img src="images/massage.jpg" alt="Массаж" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Релакс</div>
@@ -149,19 +149,19 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-parisienne mb-4 text-gray-800">Массаж</h3>
                         <ul class="space-y-4 mb-6 text-gray-600 font-poppins">
-                            <li class="flex items-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Классический массаж</li>
-                            <li class="flex items-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Антицеллюлитный массаж</li>
-                            <li class="flex items-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Лимфодренажный массаж</li>
-                            <li class="flex items-center"><i class="fas fa-spa text-2xl text-pink-600 mr-4"></i>СПА-программы</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Классический массаж</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Антицеллюлитный массаж</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-hands text-2xl text-pink-600 mr-4"></i>Лимфодренажный массаж</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-spa text-2xl text-pink-600 mr-4"></i>СПА-программы</li>
                         </ul>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-2xl">от 1500 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Записаться</a>
                         </div>
                     </div>
                 </div>
                 <!-- Услуга: Депиляция -->
-                <div class="service-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-200">
+                <div class="service-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-200">
                     <div class="relative">
                         <img src="images/depilation.jpg" alt="Депиляция" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Комфорт</div>
@@ -169,12 +169,12 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-parisienne mb-4 text-gray-800">Депиляция</h3>
                         <ul class="space-y-4 mb-6 text-gray-600 font-poppins">
-                            <li class="flex items-center"><i class="fas fa-leaf text-2xl text-pink-600 mr-4"></i>Восковая депиляция</li>
-                            <li class="flex items-center"><i class="fas fa-leaf text-2xl text-pink-600 mr-4"></i>Шугаринг</li>
-                            <li class="flex items-center"><i class="fas fa-laser text-2xl text-pink-600 mr-4"></i>Лазерная эпиляция</li>
-                            <li class="flex items-center"><i class="fas fa-leaf text-2xl text-pink-600 mr-4"></i>Депиляция глубокого бикини</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-leaf text-2xl text-pink-600 mr-4"></i>Восковая депиляция</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-leaf text-2xl text-pink-600 mr-4"></i>Шугаринг</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-laser text-2xl text-pink-600 mr-4"></i>Лазерная эпиляция</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-leaf text-2xl text-pink-600 mr-4"></i>Депиляция глубокого бикини</li>
                         </ul>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-2xl">от 800 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Записаться</a>
                         </div>
@@ -184,12 +184,12 @@
         </section>
 
         <!-- Товары -->
-        <section id="products" class="mb-24">
-            <div class="section-divider mb-16"></div>
-            <h2 class="text-5xl font-parisienne text-center mb-16 text-gradient animate-zoom-in">Наши товары</h2>
+        <section id="products" class="mb-24 text-center">
+            <div class="section-divider mb-16 mx-auto"></div>
+            <h2 class="text-5xl font-parisienne mb-16 text-gradient animate-zoom-in">Наши товары</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Товар: Шампунь -->
-                <div class="product-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up">
+                <div class="product-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up">
                     <div class="relative">
                         <img src="images/shampoo.jpg" alt="Шампунь" class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Хит</div>
@@ -197,14 +197,14 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-parisienne mb-3 text-gray-800">Шампунь для волос</h3>
                         <p class="text-gray-600 mb-4 font-poppins">Профессиональный уход для сияния волос</p>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-xl">1200 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Купить</a>
                         </div>
                     </div>
                 </div>
                 <!-- Товар: Гель-лак -->
-                <div class="product-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-100">
+                <div class="product-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-100">
                     <div class="relative">
                         <img src="images/gel-polish.jpg" alt="Гель-лак" class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Тренд</div>
@@ -212,14 +212,14 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-parisienne mb-3 text-gray-800">Гель-лак</h3>
                         <p class="text-gray-600 mb-4 font-poppins">Яркие цвета, стойкость до 4 недель</p>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-xl">850 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Купить</a>
                         </div>
                     </div>
                 </div>
                 <!-- Товар: Крем для лица -->
-                <div class="product-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-200">
+                <div class="product-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-200">
                     <div class="relative">
                         <img src="images/face-cream.jpg" alt="Крем для лица" class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Премиум</div>
@@ -227,14 +227,14 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-parisienne mb-3 text-gray-800">Крем для лица</h3>
                         <p class="text-gray-600 mb-4 font-poppins">Глубокое увлажнение и сияние кожи</p>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-xl">1500 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Купить</a>
                         </div>
                     </div>
                 </div>
                 <!-- Товар: Масло для тела -->
-                <div class="product-card bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-300">
+                <div class="product-card bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden transition duration-500 animate-slide-up delay-300">
                     <div class="relative">
                         <img src="images/body-oil.jpg" alt="Масло для тела" class="w-full h-56 object-cover transform hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full font-poppins text-sm">Новинка</div>
@@ -242,7 +242,7 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-parisienne mb-3 text-gray-800">Масло для тела</h3>
                         <p class="text-gray-600 mb-4 font-poppins">Питание и аромат ванили для кожи</p>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-center items-center space-x-6">
                             <span class="text-pink-600 font-poppins font-bold text-xl">950 ₽</span>
                             <a href="tel:+79780917717" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-poppins font-semibold px-6 py-3 rounded-full transition transform hover:scale-110">Купить</a>
                         </div>
@@ -252,18 +252,18 @@
         </section>
 
         <!-- О нас -->
-        <section id="about" class="mb-24 relative bg-about-section py-20">
-            <div class="section-divider mb-16"></div>
-            <div class="container mx-auto px-6">
-                <h2 class="text-5xl font-parisienne text-center mb-16 text-gradient animate-zoom-in">О нашем салоне</h2>
-                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden md:flex">
+        <section id="about" class="mb-24 text-center py-20">
+            <div class="section-divider mb-16 mx-auto"></div>
+            <h2 class="text-5xl font-parisienne mb-16 text-gradient animate-zoom-in">О нашем салоне</h2>
+            <div class="bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
+                <div class="md:flex">
                     <div class="md:w-1/2">
                         <img src="images/hero.jpg" alt="Салон красоты Зеркало" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-10 md:w-1/2">
                         <p class="text-gray-600 mb-6 font-poppins text-lg leading-relaxed">Салон "Зеркало" – это место, где рождается ваша уверенность и красота. Наши мастера – настоящие художники, создающие уникальные образы.</p>
                         <p class="text-gray-600 mb-6 font-poppins text-lg leading-relaxed">Мы используем только премиальную косметику и современные технологии, чтобы вы чувствовали себя на высоте.</p>
-                        <div class="flex flex-wrap gap-6">
+                        <div class="flex flex-wrap justify-center gap-6">
                             <div class="flex items-center bg-pink-100 px-6 py-3 rounded-full">
                                 <i class="fas fa-star text-2xl text-pink-600 mr-3"></i>
                                 <span class="text-gray-800 font-poppins font-semibold">Мастерство</span>
@@ -283,92 +283,90 @@
         </section>
 
         <!-- Отзывы -->
-        <section id="reviews" class="mb-24 relative">
-            <div class="section-divider mb-16"></div>
-            <h2 class="text-5xl font-parisienne text-center mb-16 text-gradient animate-zoom-in">Что говорят клиенты</h2>
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="bg-white p-8 rounded-2xl shadow-2xl animate-slide-up">
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mr-4">
-                                <i class="fas fa-user text-3xl text-pink-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-parisienne text-gray-800">Анна</h4>
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+        <section id="reviews" class="mb-24 text-center">
+            <div class="section-divider mb-16 mx-auto"></div>
+            <h2 class="text-5xl font-parisienne mb-16 text-gradient animate-zoom-in">Что говорят клиенты</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+                <div class="bg-opacity-90 bg-white p-8 rounded-2xl shadow-2xl animate-slide-up">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-3xl text-pink-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-parisienne text-gray-800">Анна</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <p class="text-gray-600 font-poppins text-lg">"Окрашивание – просто магия! Цвет идеальный, волосы блестят!"</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-2xl animate-slide-up delay-100">
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mr-4">
-                                <i class="fas fa-user text-3xl text-pink-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-parisienne text-gray-800">Елена</h4>
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                    <p class="text-gray-600 font-poppins text-lg">"Окрашивание – просто магия! Цвет идеальный, волосы блестят!"</p>
+                </div>
+                <div class="bg-opacity-90 bg-white p-8 rounded-2xl shadow-2xl animate-slide-up delay-100">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-3xl text-pink-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-parisienne text-gray-800">Елена</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        <p class="text-gray-600 font-poppins text-lg">"Маникюр – восторг! Держится месяц, мастера – волшебницы!"</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-2xl animate-slide-up delay-200">
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mr-4">
-                                <i class="fas fa-user text-3xl text-pink-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-parisienne text-gray-800">Ольга</h4>
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
+                    <p class="text-gray-600 font-poppins text-lg">"Маникюр – восторг! Держится месяц, мастера – волшебницы!"</p>
+                </div>
+                <div class="bg-opacity-90 bg-white p-8 rounded-2xl shadow-2xl animate-slide-up delay-200">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-3xl text-pink-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-parisienne text-gray-800">Ольга</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
-                        <p class="text-gray-600 font-poppins text-lg">"Косметология здесь – сказка! Кожа сияет, как никогда!"</p>
                     </div>
+                    <p class="text-gray-600 font-poppins text-lg">"Косметология здесь – сказка! Кожа сияет, как никогда!"</p>
                 </div>
             </div>
         </section>
 
         <!-- Контакты -->
-        <section id="contacts" class="mb-24 relative bg-contact-section py-20">
-            <div class="section-divider mb-16"></div>
-            <div class="container mx-auto px-6">
-                <h2 class="text-5xl font-parisienne text-center mb-16 text-gradient animate-zoom-in">Свяжитесь с нами</h2>
-                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden md:flex">
+        <section id="contacts" class="mb-24 text-center py-20">
+            <div class="section-divider mb-16 mx-auto"></div>
+            <h2 class="text-5xl font-parisienne mb-16 text-gradient animate-zoom-in">Свяжитесь с нами</h2>
+            <div class="bg-opacity-90 bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
+                <div class="md:flex">
                     <div class="p-10 md:w-1/2">
                         <div class="space-y-10">
-                            <div class="flex items-start">
+                            <div class="flex items-start justify-center">
                                 <i class="fas fa-map-marker-alt text-3xl text-pink-600 mr-6 mt-1"></i>
                                 <div>
                                     <h4 class="text-2xl font-parisienne text-gray-800 mb-2">Адрес</h4>
                                     <p class="text-gray-600 font-poppins text-lg">Севастополь, ул. Колобова, 34/1</p>
                                 </div>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start justify-center">
                                 <i class="fas fa-phone-alt text-3xl text-pink-600 mr-6 mt-1"></i>
                                 <div>
                                     <h4 class="text-2xl font-parisienne text-gray-800 mb-2">Телефон</h4>
                                     <a href="tel:+79780917717" class="text-pink-600 hover:text-pink-700 font-poppins text-lg">+7 978 091 77 17</a>
                                 </div>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start justify-center">
                                 <i class="fas fa-clock text-3xl text-pink-600 mr-6 mt-1"></i>
                                 <div>
                                     <h4 class="text-2xl font-parisienne text-gray-800 mb-2">Режим работы</h4>
@@ -376,18 +374,18 @@
                                     <p class="text-gray-600 font-poppins text-lg">Сб-Вс: 10:00 - 18:00</p>
                                 </div>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start justify-center">
                                 <i class="fas fa-envelope text-3xl text-pink-600 mr-6 mt-1"></i>
                                 <div>
                                     <h4 class="text-2xl font-parisienne text-gray-800 mb-2">Email</h4>
                                     <p class="text-gray-600 font-poppins text-lg">salon.zerkalo@gmail.com</p>
                                 </div>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start justify-center">
                                 <i class="fas fa-hashtag text-3xl text-pink-600 mr-6 mt-1"></i>
                                 <div>
                                     <h4 class="text-2xl font-parisienne text-gray-800 mb-2">Социальные сети</h4>
-                                    <div class="flex space-x-6 mt-3">
+                                    <div class="flex space-x-6 mt-3 justify-center">
                                         <a href="#" class="text-pink-600 hover:text-pink-700 text-3xl transform hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
                                         <a href="#" class="text-pink-600 hover:text-pink-700 text-3xl transform hover:scale-110 transition"><i class="fab fa-vk"></i></a>
                                         <a href="#" class="text-pink-600 hover:text-pink-700 text-3xl transform hover:scale-110 transition"><i class="fab fa-telegram"></i></a>
@@ -407,7 +405,7 @@
 
     <!-- Футер -->
     <footer class="bg-gradient-to-r from-pink-700 to-purple-800 text-white py-12 relative">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-6 text-center max-w-5xl">
             <p class="text-2xl font-parisienne mb-6">Салон красоты "Зеркало" – ваша красота в наших руках</p>
             <div class="flex justify-center space-x-8">
                 <a href="#" class="text-3xl hover:text-pink-300 transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
