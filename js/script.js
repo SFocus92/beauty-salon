@@ -21,16 +21,23 @@ addToCartButtons.forEach(button => {
 });
 
 // Анимация при прокрутке
-const animateElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+const animateElements = document.querySelectorAll('.animate-slide-up, .animate-zoom-in, .animate-fade-in');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.animationPlayState = 'running';
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0.3 });
 
 animateElements.forEach(el => {
     el.style.animationPlayState = 'paused';
     observer.observe(el);
+});
+
+// Параллакс эффект для hero
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero-image');
+    const scrollPosition = window.pageYOffset;
+    hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
 });
